@@ -80,7 +80,7 @@ class AccountPage extends StatelessWidget {
                               width: 10,
                             ),
                             Image.asset(
-                              'assets/icons/bookings.png',
+                              'assets/icons/star.png',
                               height: 92,
                               width: 40,
                             ),
@@ -131,7 +131,7 @@ class AccountPage extends StatelessWidget {
                               width: 10,
                             ),
                             Image.asset(
-                              'assets/icons/bookings.png',
+                              'assets/icons/verified.png',
                               height: 92,
                               width: 40,
                             ),
@@ -142,17 +142,12 @@ class AccountPage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Bookings',
+                                  'KYC',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                 ),
                                 Text(
-                                  '123',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 22),
-                                ),
-                                Text(
-                                  'Reserved',
+                                  'Verified',
                                   style: TextStyle(
                                       color: const Color.fromRGBO(
                                         86,
@@ -160,7 +155,7 @@ class AccountPage extends StatelessWidget {
                                         86,
                                         1,
                                       ),
-                                      fontSize: 14),
+                                      fontSize: 18),
                                 ),
                               ],
                             ),
@@ -206,10 +201,14 @@ class AccountPage extends StatelessWidget {
                       height: 24,
                       width: 24,
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Text(
                       'Help',
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
+                    Spacer(),
                     IconButton(
                         onPressed: () {}, icon: Icon(Icons.navigate_next))
                   ],
@@ -221,10 +220,14 @@ class AccountPage extends StatelessWidget {
                       height: 24,
                       width: 24,
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Text(
                       'FAQ',
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
+                    Spacer(),
                     IconButton(
                         onPressed: () {}, icon: Icon(Icons.navigate_next))
                   ],
@@ -236,10 +239,14 @@ class AccountPage extends StatelessWidget {
                       height: 24,
                       width: 24,
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Text(
                       'Invite Friends',
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
+                    Spacer(),
                     IconButton(
                         onPressed: () {}, icon: Icon(Icons.navigate_next))
                   ],
@@ -251,10 +258,14 @@ class AccountPage extends StatelessWidget {
                       height: 24,
                       width: 24,
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Text(
                       'Term of Services',
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
+                    Spacer(),
                     IconButton(
                         onPressed: () {}, icon: Icon(Icons.navigate_next))
                   ],
@@ -266,10 +277,14 @@ class AccountPage extends StatelessWidget {
                       height: 24,
                       width: 24,
                     ),
+                    SizedBox(
+                      width: 20,
+                    ),
                     Text(
                       'Privacy policy',
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     ),
+                    Spacer(),
                     IconButton(
                         onPressed: () {}, icon: Icon(Icons.navigate_next))
                   ],

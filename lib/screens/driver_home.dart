@@ -1,3 +1,4 @@
+import 'package:driver_app/screens/invoices.dart';
 import 'package:flutter/material.dart';
 
 class DriverHome extends StatelessWidget {
@@ -162,7 +163,12 @@ class DriverHome extends StatelessWidget {
                           color: const Color.fromARGB(19, 19, 19, 1),
                           borderRadius: BorderRadius.circular(20)),
                       child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => InvoicePage()));
+                          },
                           icon: Icon(
                             Icons.arrow_right_alt_sharp,
                             color: Colors.white,

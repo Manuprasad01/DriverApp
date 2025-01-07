@@ -42,53 +42,77 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         actions: [
-          Image.asset('assets/icons/language.png'),
-          const Text('language'),
+          Image.asset(
+            'assets/icons/language.png',
+            height: 24,
+            width: 24,
+          ),
+          const Text(
+            'English',
+            style: TextStyle(color: Colors.white),
+          ),
         ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Spacer(),
           const Text(
             'Login',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),
           ),
-          const Text('Login to your Vikin account'),
+          const Text(
+            'Login to your Vikin account',
+            style: TextStyle(color: Colors.white),
+          ),
           const SizedBox(height: 20),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(10),
-                topRight: Radius.circular(10),
+          Center(
+            child: Container(
+              height: 59.5,
+              width: 358,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(8, 19, 30, 1),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(11),
+                  topRight: Radius.circular(11),
+                ),
+                border: Border.all(color: Colors.blue),
               ),
-              border: Border.all(color: Colors.blue),
-            ),
-            child: TextField(
-              controller: usernameController,
-              decoration: const InputDecoration(
-                hintText: 'Username',
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(horizontal: 10),
+              child: TextField(
+                controller: usernameController,
+                decoration: const InputDecoration(
+                  hintText: 'Username',
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                ),
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
+          Center(
+            child: Container(
+              height: 59.5,
+              width: 358,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(8, 19, 30, 1),
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(11),
+                  bottomRight: Radius.circular(11),
+                ),
+                border: Border.all(color: Colors.blue),
               ),
-              border: Border.all(color: Colors.blue),
-            ),
-            child: TextField(
-              controller: passwordController,
-              obscureText: true,
-              decoration: const InputDecoration(
-                hintText: 'Password',
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(horizontal: 10),
+              child: TextField(
+                controller: passwordController,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  hintText: 'Password',
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                ),
               ),
             ),
           ),
@@ -115,6 +139,18 @@ class _LoginPageState extends State<LoginPage> {
                   const Text('Sign in', style: TextStyle(color: Colors.white)),
             ),
           ),
+          Spacer(),
+          Text(
+            'dont have an account',
+            style: TextStyle(color: Colors.white),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              'Signup now!',
+              style: TextStyle(color: Colors.blue),
+            ),
+          )
         ],
       ),
     );
