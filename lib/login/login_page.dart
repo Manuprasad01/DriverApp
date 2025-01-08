@@ -1,7 +1,5 @@
-// import 'package:driver_app/screens/Bottom_Navigation.dart';
-// import 'package:driver_app/screens/driver_home.dart';
-import 'package:driver_app/screens/driver_home.dart';
-// import 'package:driver_app/screens/sample_page.dart';
+import 'package:driver_app/screens/Bottom_Navigation.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -131,8 +129,10 @@ class _LoginPageState extends State<LoginPage> {
                 if (_formKey.currentState!.validate()) {
                   if (emailController.text == 'Manu@example.com' &&
                       passwordController.text == '12345678') {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => DriverHome()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BottomNavigation()));
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text('Invalid username or password')));
