@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black, 
       appBar: AppBar(
         backgroundColor: Colors.black,
         actions: [
@@ -124,23 +124,37 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () {},
               child: const Text('Forgotten Password?'),
             ),
-            ElevatedButton(
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  if (emailController.text == 'Manu@example.com' &&
-                      passwordController.text == '12345678') {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => BottomNavigation()));
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text('Invalid username or password')));
+            SizedBox(
+              height: 48,
+              width: 125,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(125))),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    if (emailController.text == 'Manu@example.com' &&
+                        passwordController.text == '12345678') {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BottomNavigation()));
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text('Invalid username or password')));
+                    }
                   }
-                }
-              },
-              child:
-                  const Text('Sign in', style: TextStyle(color: Colors.white)),
+                },
+                child: Row(
+                  children: [
+                    const Text('Sign in',
+                        style: TextStyle(color: Colors.white)),
+                    Spacer(),
+                    Icon(Icons.arrow_forward_sharp)
+                  ],
+                ),
+              ),
             ),
             Spacer(),
             Text(
